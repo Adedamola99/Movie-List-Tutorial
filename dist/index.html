@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./output.css">
+</head>
+<body class="text-gray-600 font-mono">
+    <div class="grid md:grid-cols-3">
+        <div class="md:col-span-1 md:flex md:justify-end md:h-screen md:sticky md:top-0">
+            <nav class="text-right">
+                <div class="flex justify-between items-center">
+                    <h1 class="font-bold uppercase p-4 border-b border-gray-100">
+                        <a href="#" class="text-sm md:text-xl hover:text-gray-700">Movie Ninja</a>
+                    </h1>
+
+                    <div class="px-4 cursor-pointer md:hidden" id="burger">
+                        <svg class="w-6" width="24" height="24" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4H0V0H24V4ZM24 8H0V12H24V8ZM24 16H0V20H24V16Z" fill="black"/>
+                        </svg>
+                    </div>
+                </div>
+                <ul class="text-sm mt-6 hidden md:block" id="menu">
+                    <li class="text-gray-700 font-bold py-4">
+                        <a href="#" class="px-4 flex justify-end border-r-4 border-primary">
+                            <span>Home</span>
+                            <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                              </svg>
+                        </a>
+                    </li>
+                    <li class="py-4">
+                        <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+                            <span>About</span>
+                            <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-question" viewBox="0 0 16 16">
+                                <path d="M8.05 9.6c.336 0 .504-.24.554-.627.04-.534.198-.815.847-1.26.673-.475 1.049-1.09 1.049-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745z"/>
+                                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"/>
+                                <path d="M7.001 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"/>
+                              </svg>
+                        </a>
+                    </li>
+                    <li class= "py-4">
+                        <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+                            <span>Contact</span>
+                            <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                              </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav> <!-- end nav -->
+
+        </div>
+
+        <main class="px-16 py-6 bg-gray-100 md:col-span-2" id="Home">
+            <div class="flex justify-center md:justify-end">
+                <a href="#" class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Login</a>
+                <a href="#" class="btn text-primary ml-4 border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Sign up</a>
+            </div>
+
+            <header>
+                <h2 class="text-gray-700 text-6xl font-semibold">Anime list</h2>
+                <h3 class="text-2xl font-semibold">For ninjas</h3>
+            </header>
+
+            <div>
+                <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Release</h4>
+
+                <div class="mt-8 grid lg:grid-cols-3 gap-10">
+                    <div class="card hover:shadow-xl">
+                        <img src="./image/afjgdagfa.PNG" alt="" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Attack on Titan</span>
+                            <span class="block text-gray-500 text-sm">Rating: 9.6</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                              </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-xl">
+                        <img src="./image/ajdhjffa.PNG" alt="" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Full Metal Alchemist</span>
+                            <span class="block text-gray-500 text-sm">Rating: 8.6</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                              </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-xl">
+                        <img src="./image/azdiacf.PNG" alt="" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Vinland Saga</span>
+                            <span class="block text-gray-500 text-sm">Rating: 7.9</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                              </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flex justify-center mt-8" id="show-more">
+                    <div class="btn bg-secondary-100 text-secondary-200 p-1 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">load more</div>
+                </div>
+            </div>
+
+            
+            <div class="hidden" id="movie-list">
+                <h4 class="font-bold mt-8 border-b border-gray-200">Most Popular</h4>
+                <div class="mt-8 grid lg:grid-cols-3 gap-10">
+                    <div class="card hover:shadow-xl">
+                        <img src="./image/Capture 2.PNG" alt="" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Jujutsu Kaisen</span>
+                            <span class="block text-gray-500 text-sm">Rating: 9.0</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                              </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-xl">
+                        <img src="./image/Capture 31432.PNG" alt="" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Black Clover</span>
+                            <span class="block text-gray-500 text-sm">Rating: 8.0</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                              </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-xl">
+                        <img src="./image/sasuke.PNG" alt="" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Naruto</span>
+                            <span class="block text-gray-500 text-sm">Rating: 8.9</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                              </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-xl">
+                        <img src="./image/qefqwv.PNG" alt="" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">One Punch Man</span>
+                            <span class="block text-gray-500 text-sm">Rating: 9.0</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                              </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-xl">
+                        <img src="./image/Capturedqe.PNG" alt="" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Big Foot</span>
+                            <span class="block text-gray-500 text-sm">Rating: 7.9</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                              </svg>
+                            <span>1 hour 24 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-xl">
+                        <img src="./image/thorfinn.PNG" alt="" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Vinland Saga (Season 1)</span>
+                            <span class="block text-gray-500 text-sm">Rating: 7.9</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                              </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <main class="px-16 py-6 bg-gray-100 md:col-span-2 hidden" id="about">
+            <div class="flex justify-center md:justify-end">
+                <a href="#" class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Login</a>
+                <a href="#" class="btn text-primary ml-4 border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Sign up</a>
+            </div>
+
+            <header>
+                <h2 class="text-gray-700 text-6xl font-semibold">About</h2>
+                <h3 class="text-2xl font-semibold">Anime ninjas</h3>
+            </header>
+
+            <p class="mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis culpa fugit quae hic alias. Natus possimus doloribus ex facilis dolores soluta quod repellat sapiente. Nihil dolorum nostrum illo laborum doloribus!</p>
+
+        </main>
+        
+    </div>
+</body>
+
+<script src="./index.js"></script>
+</html>
